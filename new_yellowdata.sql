@@ -1,0 +1,13 @@
+select * from yellowtripdata;
+select count(*) from yellowtripdata;
+select sum(total_amount) from yellowtripdata;
+select sum(tolls_amount) from yellowtripdata;
+select (sum(tolls_amount)/sum(total_amount))*100 from yellowtripdata;
+select (sum(tip_amount)/sum(total_amount))*100 from yellowtripdata;
+select avg(total_amount) from yellowtripdata;
+select avg(trip_distance) from yellowtripdata;
+Select count(distinct payment_type) from yellowtripdata;
+Select distinct payment_type from yellowtripdata;
+select payment_type,avg(fare_amount) from yellowtripdata group by payment_type order  by payment_type;
+select payment_type, avg(tip_amount) from yellowtripdata group by payment_type order  by payment_type;
+select payment_type, avg(mta_tax) from yellowtripdata group by payment_type order  by payment_type;
